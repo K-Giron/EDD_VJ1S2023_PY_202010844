@@ -21,12 +21,6 @@ type ListaNuevoCliente struct {
 }
 
 func (c *Cola) Encolar(idCliente string, nombre string) {
-
-	if idCliente == "X" {
-		idCliente = generarIDAleatorio()
-
-	}
-
 	nuevoCliente := &Cliente{IdCliente: idCliente, Nombre: nombre}
 	if c.Longitud == 0 {
 		nuevoNodo := &NodoCola{nuevoCliente, nil}
@@ -43,12 +37,6 @@ func (c *Cola) Encolar(idCliente string, nombre string) {
 	}
 }
 
-func generarIDAleatorio() string {
-	rand.Seed(time.Now().UnixNano())
-	randomID := rand.Intn(100000)
-	return strconv.Itoa(randomID)
-}
-
 func (c *Cola) Descolar() {
 	if c.Longitud == 0 {
 		fmt.Println("No hay alumnos pendientes en la cola")
@@ -58,11 +46,13 @@ func (c *Cola) Descolar() {
 	}
 }
 
-func LeerCola(ruta string, listaAux *Cola) {
+func LeerCola(ruta string, listaAux *Cola) *ListaCircular {
+	listaAuxiliar := &ListaCircular{}
+	idsGenerados := make(map[string]bool) // Mapa para realizar seguimiento de los IDs generados
 	file, err := os.Open(ruta)
 	if err != nil {
 		fmt.Println("Error al abrir el archivo")
-		return
+		return nil
 	}
 	defer file.Close()
 
@@ -76,15 +66,32 @@ func LeerCola(ruta string, listaAux *Cola) {
 		}
 		if err != nil {
 			fmt.Println("No pude la línea del csv")
-			return
+			return nil
 		}
 		if encabezado {
 			encabezado = false
 			continue
 		}
-
-		listaAux.Encolar(linea[0], linea[1])
+		flag := false
+		if linea[0] == "X" {
+			// Generar un ID único
+			idGenerado := generarIDAleatorio()
+			for idsGenerados[idGenerado] {
+				idGenerado = generarIDAleatorio()
+			}
+			linea[0] = idGenerado
+			flag = true
+			idsGenerados[idGenerado] = true // Registrar el ID generado en el mapa
+		}
+		cliente := &Cliente{IdCliente: linea[0], Nombre: linea[1]}
+		if flag {
+			listaAux.Encolar(linea[0], linea[1])
+			listaAuxiliar.Insertar(cliente.IdCliente, cliente.Nombre)
+		} else {
+			listaAux.Encolar(linea[0], linea[1])
+		}
 	}
+	return listaAuxiliar
 }
 
 func (c *Cola) Graficar() {
@@ -110,4 +117,10 @@ func (c *Cola) Graficar() {
 	crearArchivo(nombre_archivo)
 	escribirArchivo(texto, nombre_archivo)
 	ejecutar(nombre_imagen, nombre_archivo)
+}
+
+func generarIDAleatorio() string {
+	rand.Seed(time.Now().UnixNano())
+	randomID := rand.Intn(100000) + 1
+	return strconv.Itoa(randomID)
 }

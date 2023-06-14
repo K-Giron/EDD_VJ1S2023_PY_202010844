@@ -15,7 +15,6 @@ func main() {
 	ListaSimple.Insertar("202010848", "Kevin", "Estudiante", "12345678")
 
 	estructuras.LeerEmpleados("archivos_prueba/empleados.csv", ListaSimple)
-	ListaSimple.Mostrar()
 	ListaSimple.ReporteEmpleados()
 
 	fmt.Println("-----------------------------------------")
@@ -25,7 +24,6 @@ func main() {
 	ListaDoble.Insertar("imagen3", "3")
 	ListaDoble.Insertar("imagen4", "4")
 	estructuras.LeerImagen("archivos_prueba/imagenes.csv", ListaDoble)
-	ListaDoble.Mostrar()
 	ListaDoble.ReporteImagen()
 
 	fmt.Println("-----------------------------------------")
@@ -35,7 +33,6 @@ func main() {
 	ListaCircular.Insertar("202010846", "Susana")
 	ListaCircular.Insertar("202010847", "jeremias")
 	estructuras.LeerClientes("archivos_prueba/clientes_registrados.csv", ListaCircular)
-	ListaCircular.Mostrar()
 	ListaCircular.ReporteClientes()
 
 	fmt.Println("-----------------------------------------")
@@ -44,7 +41,22 @@ func main() {
 	Cola.Encolar("4344", "Juan")
 	Cola.Encolar("4345", "Pedro")
 	Cola.Encolar("4346", "Maria")
-	estructuras.LeerCola("archivos_prueba/clientes_cola.csv", Cola)
+	clientesNuevos := estructuras.LeerCola("archivos_prueba/clientes_cola.csv", Cola)
 	Cola.Graficar()
+
+	fmt.Println("-----------------------------------------")
+	if clientesNuevos.Longitud > 0 {
+		aux := clientesNuevos.Inicio
+		for {
+			ListaCircular.Insertar(aux.Cliente.IdCliente, aux.Cliente.Nombre)
+			aux = aux.Siguiente
+			if aux == clientesNuevos.Inicio {
+				break
+			}
+		}
+	}
+	fmt.Println("Verificando si se agregaron los clientes nuevos")
+	ListaCircular.Mostrar()
+	fmt.Println("Agregando los nuevos clientes a la lista circular")
 
 }
