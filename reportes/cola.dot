@@ -1,0 +1,27 @@
+digraph cola{
+rankdir=LR;
+node[shape = record];
+nodonull2[label="null"];
+nodo0[label="{ID: 4343, Nombre: Cristian|}"];
+nodo1[label="{ID: 4344, Nombre: Juan|}"];
+nodo2[label="{ID: 4345, Nombre: Pedro|}"];
+nodo3[label="{ID: 4346, Nombre: Maria|}"];
+nodo4[label="{ID: 4575, Nombre: Cristian Suy|}"];
+nodo5[label="{ID: 32068, Nombre: Hector Jimenez|}"];
+nodo6[label="{ID: 6344, Nombre: Joel Guzman|}"];
+nodo7[label="{ID: 2480, Nombre: Karen Garcia|}"];
+nodo8[label="{ID: 32068, Nombre: Teodoro Mejia|}"];
+nodo9[label="{ID: 5965, Nombre: Alejandra Perez|}"];
+nodo0->nodo1;
+nodo1->nodo2;
+nodo2->nodo3;
+nodo3->nodo4;
+nodo4->nodo5;
+nodo5->nodo6;
+nodo6->nodo7;
+nodo7->nodo8;
+nodo8->nodo9;
+nodo9->nodonull2;
+}odo8->nodo9;
+nodo9->nodonull2;
+}
