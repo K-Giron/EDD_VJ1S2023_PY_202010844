@@ -118,6 +118,7 @@ func menuAdmin() {
 			ListaCircular.ReporteClientes()
 			Cola.Graficar()
 			Pila.Graficar()
+			Pila.CrearContenidoJSON()
 			fmt.Println("Reportes generados exitosamente en la carpeta Reportes")
 		case "6":
 			fmt.Println("Sesión cerrada exitosamente")

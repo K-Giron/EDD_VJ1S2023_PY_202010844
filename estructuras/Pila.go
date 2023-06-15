@@ -1,6 +1,9 @@
 package estructuras
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
 type Pila struct {
 	Primero  *NodoPila
@@ -32,6 +35,33 @@ func (p *Pila) Pop() {
 		p.Primero = p.Primero.Siguiente
 		p.Longitud--
 	}
+}
+func (x *Pila) CrearContenidoJSON() {
+	contenido := "{\n"
+	contenido += "	\"Pedidos\": [\n"
+	help := x.Primero
+	for i := 0; i < x.Longitud; i++ {
+		contenido += "		{\n"
+		contenido += "			\"id_cliente\": \"" + help.Pedido.idCliente + "\",\n"
+		contenido += "			\"imagen\": \"" + help.Pedido.nombreImagen + "\"\n"
+		contenido += "		},\n"
+		help = help.Siguiente
+	}
+	contenido += "]\n"
+	contenido += "}\n"
+	CrearArchivoJSON(string(contenido), "./reportes/ReporteJSON.json")
+}
+
+func CrearArchivoJSON(contenido string, nameArchivo string) {
+	archivo, err := os.Create(nameArchivo)
+	if err != nil {
+		fmt.Println(err)
+	}
+	_, err = archivo.WriteString(contenido)
+	if err != nil {
+		fmt.Println(err)
+	}
+	archivo.Close()
 }
 
 func (p *Pila) Graficar() {

@@ -1,0 +1,20 @@
+{
+	"Pedidos": [
+		{
+			"id_cliente": "14049",
+			"imagen": "letra_r"
+		},
+		{
+			"id_cliente": "6344",
+			"imagen": "ave"
+		},
+		{
+			"id_cliente": "25941",
+			"imagen": "letra_r"
+		},
+		{
+			"id_cliente": "4575",
+			"imagen": "ave"
+		}
+]
+}

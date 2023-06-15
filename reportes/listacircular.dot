@@ -13,9 +13,9 @@ nodo4[label="3696,
 Jaime Rosales", shape=box];
 nodo5[label="5965,
 Alejandra Perez", shape=box];
-nodo6[label="93644,
+nodo6[label="25941,
 Hector Jimenez", shape=box];
-nodo7[label="4005,
+nodo7[label="14049,
 Teodoro Mejia", shape=box];
 nodo0->nodo1;
 nodo1->nodo2;
@@ -25,7 +25,7 @@ nodo4->nodo5;
 nodo5->nodo6;
 nodo6->nodo7;
 nodo7->nodo0;
-}}o2->nodo3;
+}o2->nodo3;
 nodo3->nodo4;
 nodo4->nodo5;
 nodo5->nodo6;
