@@ -43,7 +43,7 @@ func (p *Pila) Graficar() {
 	aux := p.Primero
 	texto += "nodo0 [label=\""
 	for i := 0; i < p.Longitud; i++ {
-		texto = texto + "|(Nombre: " + aux.Pedido.nombreImagen + ", ID cliente: " + aux.Pedido.idCliente + ")"
+		texto = texto + "|(Imagen: " + aux.Pedido.nombreImagen + ", ID cliente: " + aux.Pedido.idCliente + ")"
 		aux = aux.Siguiente
 	}
 	texto += "\"]; \n}"
