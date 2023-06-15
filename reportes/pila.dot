@@ -1,0 +1,4 @@
+digraph pila{
+rankdir=LR;
+node[shape = record]nodo0 [label="|(Nombre: letra_r, ID cliente: 24236)|(Nombre: ave, ID cliente: 4575)"]; 
+}

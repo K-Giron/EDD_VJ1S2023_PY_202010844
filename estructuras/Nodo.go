@@ -22,10 +22,7 @@ type NodoCola struct {
 	Siguiente *NodoCola
 }
 
-/*
 type NodoPila struct {
-	Cliente   *Cliente
-	Imagen    *Imagen
+	Pedido    *Pedido
 	Siguiente *NodoPila
 }
-*/

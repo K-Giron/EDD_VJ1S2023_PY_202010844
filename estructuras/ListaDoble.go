@@ -43,7 +43,7 @@ func (l *ListaDoble) Mostrar() {
 	aux := l.Inicio
 
 	for aux != nil {
-		fmt.Println(aux.Imagen.Nombre, aux.Imagen.Capas)
+		fmt.Println(aux.Imagen.Nombre, "|", aux.Imagen.Capas)
 		aux = aux.Siguiente
 	}
 }

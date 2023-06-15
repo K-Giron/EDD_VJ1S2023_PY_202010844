@@ -37,12 +37,26 @@ func (c *Cola) Encolar(idCliente string, nombre string) {
 	}
 }
 
-func (c *Cola) Descolar() {
+func (c *Cola) Descolar() string {
+	idCliente := c.Primero.Cliente.IdCliente
 	if c.Longitud == 0 {
 		fmt.Println("No hay alumnos pendientes en la cola")
 	} else {
 		c.Primero = c.Primero.Siguiente
 		c.Longitud--
+	}
+	return idCliente
+}
+
+func (c *Cola) Mostrar() {
+	if c.Longitud == 0 {
+		fmt.Println("No hay clientes pendientes en la cola")
+	} else {
+		aux := c.Primero
+		for aux != nil {
+			fmt.Println(aux.Cliente.IdCliente, aux.Cliente.Nombre)
+			aux = aux.Siguiente
+		}
 	}
 }
 
