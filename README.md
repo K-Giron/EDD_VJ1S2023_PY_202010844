@@ -13,5 +13,13 @@ El menú inicial en el sistema es un sistema de Login, este menú de login funci
 ### Menú de administrador
 
 El siguiente menú que aparece en el sistema es el menú administrador, una vez ya se haya logeado el administrador pues se le da acceso a este menú el cual tiene varias opciones de carga de archivos en la cual se lee el archivo automáticamente y se carga a las listas correspondientes también de manera automática, cabe recalcar que dichos archivos deben estar en una carpeta llamada "archivos_prueba" y con los nombres ya establecidos anteriormente. Las 3 primeras acciones cargan los achivos correspondientes y la opción 4 carga una cola y actualiza la lista circular de clientes, la última de las opciones cierra la sesión y devuelve al usuario al login.
+<br>
+<img align='center' src="https://github.com/K-Giron/EDD_VJ1S2023_PY_202010844/assets/68490914/092cac4d-3d35-4dbf-a1db-a275ef45a071" width="600">
+<br>
+### Menú de Empleados
+
+El menú de empleados aparece solamente cuando se logean con los credenciales de un empleado, aparecen las opciones de ver imágenes cargadas la cual lista el nombre de las imágenes con sus capas y se debe elegir una ingresando el nombre, posteriormente, en la opción 2 del menú que se realiza el pedido se extrae el dato id de la cola que esta primero para guardar ese dato junto al nombre de la imagen. Por último tiene la opción de cerrar sesión que regresa al Login.
+
+
 
 
