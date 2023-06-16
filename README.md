@@ -19,7 +19,18 @@ El siguiente menú que aparece en el sistema es el menú administrador, una vez 
 ### Menú de Empleados
 
 El menú de empleados aparece solamente cuando se logean con los credenciales de un empleado, aparecen las opciones de ver imágenes cargadas la cual lista el nombre de las imágenes con sus capas y se debe elegir una ingresando el nombre, posteriormente, en la opción 2 del menú que se realiza el pedido se extrae el dato id de la cola que esta primero para guardar ese dato junto al nombre de la imagen. Por último tiene la opción de cerrar sesión que regresa al Login.
+<br>
+<img align='center' src="https://github.com/K-Giron/EDD_VJ1S2023_PY_202010844/assets/68490914/c53b11e4-a361-4205-ba5b-4196d8154fb1" width="600">
+<br>
 
+### Reportes
 
+Se recalca que los reportes se crean en una carpeta llamada reportes dentro de la raíz principal y se crea su respectivo dot con su jpg de cada una de las listas que son utilizadas en el programa.
+
+<br>
+<img align='center' src="https://github.com/K-Giron/EDD_VJ1S2023_PY_202010844/assets/68490914/c53b11e4-a361-4205-ba5b-4196d8154fb1" width="600">
+<br>
+
+En los reportes existen las pilas que manejan los pedidos, las listas circulares que maneja los clientes, la lista doble enlazada que maneja las imagenes, la enlazada simple que almacena a los empleados, por último la cola de clientes que esperan a ser atendidos.
 
 
