@@ -13,6 +13,8 @@ var ListaDoble = &estructuras.ListaDoble{Inicio: nil, Longitud: 0}
 var ListaCircular = &estructuras.ListaCircular{Inicio: nil, Longitud: 0}
 var Cola = &estructuras.Cola{Primero: nil, Longitud: 0}
 var Pila = &estructuras.Pila{Primero: nil, Longitud: 0}
+var matriz = &estructuras.Matriz{Raiz: &estructuras.NodoMatriz{PosX: -1, PosY: -1, Color: "RAIZ"}}
+var matriz_csv = &estructuras.Matriz{Raiz: &estructuras.NodoMatriz{PosX: -1, PosY: -1, Color: "RAIZ"}}
 
 func main() {
 
@@ -134,6 +136,7 @@ func menuEmpleado(idEmpleado string) {
 	reader := bufio.NewReader(os.Stdin)
 	nombreImagen := ""
 	idCliente := ""
+	imagen := "ave"
 	for {
 		fmt.Println("\nPor favor, elija una opción:")
 		fmt.Println("1. Ver imágenes Cargadas")
@@ -159,6 +162,8 @@ func menuEmpleado(idEmpleado string) {
 			idCliente = Cola.Descolar()
 			fmt.Println("El cliente que realizo el pedido es: ", idCliente)
 			Pila.Push(nombreImagen, idCliente)
+			matriz_csv.LeerInicial("archivos_prueba/"+imagen+"/inicial.csv", imagen)
+			matriz_csv.GenerarImagen(imagen)
 
 		case "3":
 			fmt.Println("Sesión cerrada exitosamente")
