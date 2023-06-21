@@ -150,7 +150,6 @@ func (m *Matriz) Insertar_Elemento(x int, y int, color string) {
 		fmt.Println("ERROR!!!!!!")
 	}
 }
-
 func (m *Matriz) Reporte() {
 	texto := ""
 	nombre_archivo := "./reportes/matriz.dot"
@@ -263,9 +262,9 @@ func (m *Matriz) LeerInicial(ruta string, imagen string) {
 			continue
 		}
 		if linea[0] == "0" {
-			m.leerConfig("archivos_prueba/" + imagen + "/" + linea[1]) /*csv/mario/config.csv*/
+			m.leerConfig("archivos_prueba/csv/" + imagen + "/" + linea[1]) /*csv/mario/config.csv*/
 		} else {
-			m.LeerArchivo("archivos_prueba/" + imagen + "/" + linea[1])
+			m.LeerArchivo("archivos_prueba/csv/" + imagen + "/" + linea[1])
 		}
 	}
 }
@@ -303,7 +302,7 @@ func (m *Matriz) leerConfig(ruta string) {
 }
 
 func (m *Matriz) GenerarImagen(nombre_imagen string) {
-	archivoCSS := "archivos_prueba/" + nombre_imagen + "/" + nombre_imagen + ".css" // csv/mario/mario.css
+	archivoCSS := "archivos_prueba/csv/" + nombre_imagen + "/" + nombre_imagen + ".css" // csv/mario/mario.css
 	contenidoCSS := "body{\n background: #333333; \n height: 100vh; \n display: flex; \n justify-content: center; \n align-items: center; \n } \n"
 	contenidoCSS += ".canvas{ \n width: " + strconv.Itoa(m.ImageWidth*m.PixelWidth) + "px; \n"
 	contenidoCSS += "height: " + strconv.Itoa(m.ImageHeight*m.PixelHeight) + "px; \n }"
@@ -340,7 +339,7 @@ func (m *Matriz) GenerarImagen(nombre_imagen string) {
 }
 
 func (m *Matriz) generarHTML(nombre_imagen string) {
-	archivoHTML := "archivos_prueba/" + nombre_imagen + "/" + nombre_imagen + ".html"
+	archivoHTML := "archivos_prueba/csv/" + nombre_imagen + "/" + nombre_imagen + ".html"
 	contenidoHTML := "<!DOCTYPE html> \n <html> \n <head> \n <link rel=\"stylesheet\"  href=\""
 	contenidoHTML += nombre_imagen + ".css"
 	contenidoHTML += "\" > \n </head> \n <body> \n <div class=\"canvas\"> \n"

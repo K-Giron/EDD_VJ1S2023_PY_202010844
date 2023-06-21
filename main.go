@@ -136,7 +136,6 @@ func menuEmpleado(idEmpleado string) {
 	reader := bufio.NewReader(os.Stdin)
 	nombreImagen := ""
 	idCliente := ""
-	imagen := "ave"
 	for {
 		fmt.Println("\nPor favor, elija una opción:")
 		fmt.Println("1. Ver imágenes Cargadas")
@@ -162,8 +161,13 @@ func menuEmpleado(idEmpleado string) {
 			idCliente = Cola.Descolar()
 			fmt.Println("El cliente que realizo el pedido es: ", idCliente)
 			Pila.Push(nombreImagen, idCliente)
-			matriz_csv.LeerInicial("archivos_prueba/"+imagen+"/inicial.csv", imagen)
-			matriz_csv.GenerarImagen(imagen)
+
+			//archivo := "body.csv"
+			//matriz_csv.LeerArchivo("csv/" + imagen + "/" + archivo)
+			//matriz_csv.Reporte()
+			matriz_csv.LeerInicial("archivos_prueba/csv/"+nombreImagen+"/inicial.csv", nombreImagen)
+			matriz_csv.GenerarImagen(nombreImagen)
+			matriz.Reporte()
 
 		case "3":
 			fmt.Println("Sesión cerrada exitosamente")
