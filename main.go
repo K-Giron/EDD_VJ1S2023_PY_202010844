@@ -13,6 +13,8 @@ var ListaDoble = &estructuras.ListaDoble{Inicio: nil, Longitud: 0}
 var ListaCircular = &estructuras.ListaCircular{Inicio: nil, Longitud: 0}
 var Cola = &estructuras.Cola{Primero: nil, Longitud: 0}
 var Pila = &estructuras.Pila{Primero: nil, Longitud: 0}
+var matriz = &estructuras.Matriz{Raiz: &estructuras.NodoMatriz{PosX: -1, PosY: -1, Color: "RAIZ"}}
+var matriz_csv = &estructuras.Matriz{Raiz: &estructuras.NodoMatriz{PosX: -1, PosY: -1, Color: "RAIZ"}}
 
 func main() {
 
@@ -159,6 +161,13 @@ func menuEmpleado(idEmpleado string) {
 			idCliente = Cola.Descolar()
 			fmt.Println("El cliente que realizo el pedido es: ", idCliente)
 			Pila.Push(nombreImagen, idCliente)
+
+			//archivo := "body.csv"
+			//matriz_csv.LeerArchivo("csv/" + imagen + "/" + archivo)
+			//matriz_csv.Reporte()
+			matriz_csv.LeerInicial("archivos_prueba/csv/"+nombreImagen+"/inicial.csv", nombreImagen)
+			matriz_csv.GenerarImagen(nombreImagen)
+			matriz.Reporte()
 
 		case "3":
 			fmt.Println("Sesión cerrada exitosamente")
