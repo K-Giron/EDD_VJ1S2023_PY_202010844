@@ -13,45 +13,40 @@ Se utilizan diferentes estructuras de datos para guardar cada tipo de dato.
 ### Carga de datos
 La manera de acceder a los datos es con archivos de tipo .csv y archivo de tipo JSON . En estos archivos se encuentran todos los registros los cuales deben ser registrados y posteriormente deben ser guardados en las estructuras de datos establecidos para cada tipo de objeto. Se presenta la carpeta de los archivos .csv
 <br>
-<img align='center' src="https://github.com/K-Giron/EDD_VJ1S2023_PY_202010844/assets/68490914/92d3719c-f52a-40d6-83cd-533a0348023b" width="600">
+<img align='center' src="https://github.com/K-Giron/EDD_VJ1S2023_PY_202010844/assets/68490914/72cb42ec-7283-487b-9545-651e4535e720">
 <br>
 
 ### Funcionalidad de estructuras
 En la carpeta de estructuras se encuentra cada módulo que contiene todos los métodos y funciones para la funcionalidad de cada estructura de datos, en cada uno de las estructuras se encuentran también sus modelos para sus funciones
 <br>
-<img align='center' src="https://github.com/K-Giron/EDD_VJ1S2023_PY_202010844/assets/68490914/8db75b84-06be-4fda-8c12-6b9bffddcb0d">
+<img align='center' src="https://github.com/K-Giron/EDD_VJ1S2023_PY_202010844/assets/68490914/9af4d586-b43a-4586-8a8b-1933ae57f665">
 <br>
 
 ### Módulo de Peticiones
 En este módulo se encuentran estructuras utilizadas para las peticiones que se reciben desde el front y así mismo para la funcionalidad del backend
 <br>
-<img align='center' src="https://github.com/K-Giron/EDD_VJ1S2023_PY_202010844/assets/68490914/57c849b4-c394-4c4f-9de8-e8b50b0eb78c" width="600">
+<img align='center' src="https://github.com/K-Giron/EDD_VJ1S2023_PY_202010844/assets/68490914/16d24e83-c667-429f-aa00-ae81dad0f826">
 <br>
 
 ### Módulos
 Los módulos contienen la estructura a guardar de los objetos y también el de la estructura en específico del módulo que se este trabajando además de todas las funcionalidades detalladas en las siguientes imágenes.
 <br>
-<img align='center' src="https://github.com/K-Giron/EDD_VJ1S2023_PY_202010844/assets/68490914/3250566c-354c-450c-ae99-a5f86c2cb3f1" width="600">
+<img align='center' src="https://github.com/K-Giron/EDD_VJ1S2023_PY_202010844/assets/68490914/9af4d586-b43a-4586-8a8b-1933ae57f665" width="600">
 <br>
 
 ### Clase Módulo
 En este módulo se encuentra toda la lógica y funcionalidad del sistema, se encuentran las peticiones post y get que recibe del frontend y así mismo todo lo relacionado con las estructuras.
 <br>
-<img align='center' src="https://github.com/K-Giron/EDD_VJ1S2023_PY_202010844/assets/68490914/71921bd8-8fad-48ca-97a2-049b6fa4211e" width="600">
+<img align='center' src="https://github.com/K-Giron/EDD_VJ1S2023_PY_202010844/assets/68490914/0674dc10-3a70-412b-9ee9-a106e0ef7c22" width="600">
 <br>
 
 ### Inicialización de estructuras
 Se muestra la inicialización de las estructuras de maneral global para trabajarse posteriormente en los métodos.
 <br>
-<img align='center' src="https://github.com/K-Giron/EDD_VJ1S2023_PY_202010844/assets/68490914/71921bd8-8fad-48ca-97a2-049b6fa4211e" width="600">
+<img align='center' src="https://github.com/K-Giron/EDD_VJ1S2023_PY_202010844/assets/68490914/b945993a-10d3-43fe-9ffd-e33766b2de90" width="600">
 <br>
 
 
-### Generar Reporte
-Algunos módulos y estructuras tienen su función de generar Reportes, se muestra la generación del reporte del arbol AVL.
-<br>
-<img align='center' src="https://github.com/K-Giron/EDD_VJ1S2023_PY_202010844/assets/68490914/426d2e83-c009-47c0-a883-88f290100433" width="600">
-<br>
 
 ## Manual de Usuario
 Un Manual de usuario permite al usuario la experiencia, familiarización y visualización de la aplicación y de los diferentes componentes que se utilizan en la aplicación con el fin de utilizar de mejor manera el mismo. La aplicación cuenta con todo el uso por medio de consola, recibiendo y mostrando datos con un sistema amigable y comprensible para un mejor uso del sistema.
