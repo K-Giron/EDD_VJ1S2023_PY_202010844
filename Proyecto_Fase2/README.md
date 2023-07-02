@@ -19,7 +19,7 @@ La manera de acceder a los datos es con archivos de tipo .csv y archivo de tipo 
 ### Funcionalidad de estructuras
 En la carpeta de estructuras se encuentra cada módulo que contiene todos los métodos y funciones para la funcionalidad de cada estructura de datos, en cada uno de las estructuras se encuentran también sus modelos para sus funciones
 <br>
-<img align='center' src="https://github.com/K-Giron/EDD_VJ1S2023_PY_202010844/assets/68490914/fc64d811-5ff3-4b71-98e3-d5bf93f7692d" width="600">
+<img align='center' src="https://github.com/K-Giron/EDD_VJ1S2023_PY_202010844/assets/68490914/8db75b84-06be-4fda-8c12-6b9bffddcb0d">
 <br>
 
 ### Módulo de Peticiones
