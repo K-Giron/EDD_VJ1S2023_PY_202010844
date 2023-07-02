@@ -1,0 +1,1 @@
+digraph arbol{ "6344 - ironman" ; x1 [label="",width=.1,style=invis];"6344 - ironman" -> "2480 - ave" ; x2 [label="",width=.1,style=invis];"2480 - ave" -> x2[style=invis]; "2480 - ave" -> "4575 - deadpool" ;{rank=same x2 -> "4575 - deadpool" [style=invis]}; "6344 - ironman" -> "75361 - hulk" ;{rank=same"2480 - ave" -> "75361 - hulk" [style=invis]}; }e=invis]}; }

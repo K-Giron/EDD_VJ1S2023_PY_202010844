@@ -1,0 +1,20 @@
+{
+	"pedidos": [
+		{
+			"id_cliente": 2480,
+			"imagen": "ave"
+		},
+		{
+			"id_cliente": 6344,
+			"imagen": "ironman"
+		},
+		{
+			"id_cliente": 75361,
+			"imagen": "hulk"
+		},
+		{
+			"id_cliente": 4575,
+			"imagen": "deadpool"
+		}
+]
+}
