@@ -1,0 +1,4 @@
+digraph pila{
+rankdir=LR;
+node[shape = record]nodo0 [label="|(Imagen: corrin, ID cliente: 2480)|(Imagen: ironman, ID cliente: 6344)|(Imagen: hulk, ID cliente: 75361)|(Imagen: deadpool, ID cliente: 4575)"]; 
+}

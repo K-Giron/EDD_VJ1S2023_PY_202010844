@@ -1,0 +1,71 @@
+digraph lista{
+rankdir=LR;
+node[shape = record];
+nodo0[label="4565,
+Cristian Suy", shape=box];
+nodo1[label="5578,
+Karla Mejia", shape=box];
+nodo2[label="4378,
+Joel Guzman", shape=box];
+nodo3[label="5261,
+Karen Garcia", shape=box];
+nodo4[label="5231,
+Jaime Rosales", shape=box];
+nodo5[label="5324,
+Alejandra Perez", shape=box];
+nodo6[label="4131,
+Jose Mendez", shape=box];
+nodo7[label="5175,
+Gerardo Mendez", shape=box];
+nodo8[label="4204,
+Pedro Hernandez", shape=box];
+nodo9[label="5064,
+Maria Tux", shape=box];
+nodo10[label="5313,
+Teodoro Rodriguez", shape=box];
+nodo11[label="5030,
+Leonardo Xocoy", shape=box];
+nodo12[label="5407,
+Alberto Mejia", shape=box];
+nodo13[label="4983,
+Benito Perez", shape=box];
+nodo14[label="5654,
+Jose Requeda", shape=box];
+nodo15[label="4825,
+Jordi Urrutia", shape=box];
+nodo16[label="4262,
+Leopoldo Ruiz", shape=box];
+nodo17[label="75361,
+Hector Jimenez", shape=box];
+nodo18[label="8627,
+Teodoro Mejia", shape=box];
+nodo19[label="89960,
+Maria Jimenez", shape=box];
+nodo20[label="88936,
+Ricardo Echeverria", shape=box];
+nodo0->nodo1;
+nodo1->nodo2;
+nodo2->nodo3;
+nodo3->nodo4;
+nodo4->nodo5;
+nodo5->nodo6;
+nodo6->nodo7;
+nodo7->nodo8;
+nodo8->nodo9;
+nodo9->nodo10;
+nodo10->nodo11;
+nodo11->nodo12;
+nodo12->nodo13;
+nodo13->nodo14;
+nodo14->nodo15;
+nodo15->nodo16;
+nodo16->nodo17;
+nodo17->nodo18;
+nodo18->nodo19;
+nodo19->nodo20;
+nodo20->nodo0;
+}do17->nodo18;
+nodo18->nodo19;
+nodo19->nodo20;
+nodo20->nodo0;
+}
