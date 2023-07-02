@@ -18,7 +18,7 @@ export const Reportes = () => {
 
     const reporteGrafo = async(e) => {
         e.preventDefault();
-        fetch('http://localhost:3001/reporte-grafo',{
+        fetch('http://localhost:3001/reporteGrafo',{
         })
         .then(response => response.json())
         .then(data => validar(data));

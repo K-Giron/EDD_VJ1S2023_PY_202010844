@@ -12,6 +12,7 @@ import (
 	"encoding/base64"
 	"fmt"
 	"io/ioutil"
+	"strconv"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
@@ -27,6 +28,7 @@ var VerFacturasRealizadas *TablaHash.TablaHash
 var FiltrosColocados string
 var EmpleadoLogeado string
 var GrafosEmpleados map[string]Grafo.Grafo
+var GenerarGrafo *Grafo.Grafo
 
 func main() {
 	ListaEmpleado = &Lista.ListaSimple{Inicio: nil, Longitud: 0}
@@ -35,6 +37,7 @@ func main() {
 	FacturasRealizadas = &Facturas.BlockChain{Bloques_Creados: 0}
 	VerFacturasRealizadas = &TablaHash.TablaHash{Capacidad: 5, Utilizacion: 0}
 	PedidosCola = &ColaPedidos.Cola{Primero: nil, Longitud: 0}
+	GenerarGrafo = &Grafo.Grafo{Principal: nil}
 	FiltrosColocados = ""
 	EmpleadoLogeado = ""
 
@@ -105,6 +108,21 @@ func main() {
 		})
 	})
 
+	app.Get("/reporteGrafo", func(c *fiber.Ctx) error {
+		var imagen Peticiones.RespuestaImagen = Peticiones.RespuestaImagen{Nombre: "Reportes/grafo.jpg"}
+		imageBytes, err := ioutil.ReadFile(imagen.Nombre)
+		if err != nil {
+			return c.JSON(&fiber.Map{
+				"status": 400,
+			})
+		}
+		imagen.Imagenbase64 = "data:image/jpg;base64," + base64.StdEncoding.EncodeToString(imageBytes)
+		return c.JSON(&fiber.Map{
+			"status": 200,
+			"imagen": imagen,
+		})
+	})
+
 	app.Post("/aplicarfiltro", func(c *fiber.Ctx) error {
 		MatrizFiltro = &Matriz.Matriz{Raiz: &Matriz.NodoMatriz{PosX: -1, PosY: -1, Color: "Raiz"}}
 		var tipo Peticiones.PeticionFiltro
@@ -154,11 +172,14 @@ func main() {
 		c.BodyParser(&nuevoBloque)
 		FacturasRealizadas.InsertarBloque(nuevoBloque.Timestamp, nuevoBloque.Biller, nuevoBloque.Customer, nuevoBloque.Payment)
 		/*Ingresar al grafo, tomar los valores de nuevoBloque.Biller, nuevoBloque.Customer, PedidosCola.Primero.Pedido.Nombre_Imagen,Filtros_colocados */
+		GenerarGrafo.InsertarValores(EmpleadoLogeado, strconv.Itoa(PedidosCola.Primero.Pedido.Id_Cliente), PedidosCola.Primero.Pedido.Nombre_Imagen, FiltrosColocados)
+		GenerarGrafo.Reporte()
 		PedidosCola.Descolar()
 		VerFacturasRealizadas.NewTablaHash()
 		FacturasRealizadas.InsertarTabla(VerFacturasRealizadas, EmpleadoLogeado)
 		MatrizOriginal = &Matriz.Matriz{Raiz: &Matriz.NodoMatriz{PosX: -1, PosY: -1, Color: "Raiz"}}
 		MatrizFiltro = &Matriz.Matriz{Raiz: &Matriz.NodoMatriz{PosX: -1, PosY: -1, Color: "Raiz"}}
+
 		return c.JSON(&fiber.Map{
 			"datos": FacturasRealizadas.Bloques_Creados,
 		})

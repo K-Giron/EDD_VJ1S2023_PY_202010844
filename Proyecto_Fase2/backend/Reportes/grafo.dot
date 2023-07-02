@@ -1,0 +1,11 @@
+graph grafoDirigido{ 
+ rankdir=LR; 
+ node [shape=box]; layout=neato; 
+ nodo00[label="5385"]; 
+node [shape = ellipse]; 
+nodo01[label="2480" ]; 
+nodo11[label="ave" ]; 
+nodo21[label="Eje X, " ]; 
+nodo00 -- nodo01 -- nodo11 -- nodo21[len=1.00]; 
+
+}
