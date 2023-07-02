@@ -16,11 +16,6 @@ La manera de acceder a los datos es con archivos de tipo .csv y archivo de tipo 
 <img align='center' src="https://github.com/K-Giron/EDD_VJ1S2023_PY_202010844/assets/68490914/72cb42ec-7283-487b-9545-651e4535e720">
 <br>
 
-### Funcionalidad de estructuras
-En la carpeta de estructuras se encuentra cada módulo que contiene todos los métodos y funciones para la funcionalidad de cada estructura de datos, en cada uno de las estructuras se encuentran también sus modelos para sus funciones
-<br>
-<img align='center' src="https://github.com/K-Giron/EDD_VJ1S2023_PY_202010844/assets/68490914/9af4d586-b43a-4586-8a8b-1933ae57f665">
-<br>
 
 ### Módulo de Peticiones
 En este módulo se encuentran estructuras utilizadas para las peticiones que se reciben desde el front y así mismo para la funcionalidad del backend
@@ -55,19 +50,19 @@ Un Manual de usuario permite al usuario la experiencia, familiarización y visua
 
 El menú inicial en el sistema es un sistema de Login, este menú de login funciona tanto para el usuario admin establecido estáticamente con las credenciales id: ADMIN_202010844, password: admin, así mismo con los usuarios ingresados de manera dinámica una vez ya cargados datos con usuario admin.
 <br>
-<img align='center' src="https://github.com/K-Giron/EDD_VJ1S2023_PY_202010844/assets/68490914/ea5a3522-afcb-4f3f-a23b-51386e89cfc6" width="600">
+<img align='center' src="https://github.com/K-Giron/EDD_VJ1S2023_PY_202010844/assets/68490914/5ea98878-3e0c-43c1-b834-a5476f31a36f" width="600">
 <br>
 ### Menú de administrador
 
 El siguiente menú que aparece en el sistema es el menú administrador, una vez ya se haya logeado el administrador pues se le da acceso a este menú el cual tiene varias opciones de carga de archivos en la cual se lee el archivo automáticamente y se carga a las estructuras correspondientes también de manera automática. Las opciones de carga de pedidos es con archivo JSON y los empleados con el csv como se manejaba en la anterior forma, tiene un botón de reportes que envía a una vista de reportes de algunas estructuras.
 <br>
-<img align='center' src="https://github.com/K-Giron/EDD_VJ1S2023_PY_202010844/assets/68490914/092cac4d-3d35-4dbf-a1db-a275ef45a071" width="600">
+<img align='center' src="https://github.com/K-Giron/EDD_VJ1S2023_PY_202010844/assets/68490914/320043b1-9556-4a17-bdb5-71571c175fc5" width="600">
 <br>
 ### Menú de Empleados
 
 El menú de empleados aparece solamente cuando se logean con los credenciales de un empleado, aparecen las opciones de aplicación de filtros aplicados la cual direcciona a otra vista para la aplicacion de los filtros, la opción de generar factura la cual envía a una vista de generación de factura y la opción de ver facturas la cual envía a una tabla para ver las facturas generadas.
 <br>
-<img align='center' src="https://github.com/K-Giron/EDD_VJ1S2023_PY_202010844/assets/68490914/c53b11e4-a361-4205-ba5b-4196d8154fb1" width="600">
+<img align='center' src="https://github.com/K-Giron/EDD_VJ1S2023_PY_202010844/assets/68490914/75eda3f5-589d-44f5-8b21-f47076ac0584" width="600">
 <br>
 
 ### Reportes
@@ -75,16 +70,16 @@ El menú de empleados aparece solamente cuando se logean con los credenciales de
 Los reportes se muestra en el espacio de la imágen estática.
 
 <br>
-<img align='center' src="https://github.com/K-Giron/EDD_VJ1S2023_PY_202010844/assets/68490914/966b87af-2ddf-48da-b010-150130e2badb" width="400">
+<img align='center' src="https://github.com/K-Giron/EDD_VJ1S2023_PY_202010844/assets/68490914/fb3f553e-6e9a-47cb-9398-8dcf9626716f" width="400">
 <br>
 ### Vista Filtros
 La vista de filtros se muestran una selección para posteriormente generar o aplicar el filtro el cual se genera dentro de una carpeta dentro del backend
 <br>
-<img align='center' src="https://github.com/K-Giron/EDD_VJ1S2023_PY_202010844/assets/68490914/e2c9848d-5a80-497e-bd39-413170d0a113" width="400">
+<img align='center' src="https://github.com/K-Giron/EDD_VJ1S2023_PY_202010844/assets/68490914/1187b61b-ddf3-4ddd-b96a-ff56db7ef917" width="400">
 <br>
 
 ### Vista  Facturas
 La vista de facturas muestra todas las facturas generadas por el usuario.
 <br>
-<img align='center' src="https://github.com/K-Giron/EDD_VJ1S2023_PY_202010844/assets/68490914/e2c9848d-5a80-497e-bd39-413170d0a113" width="400">
+<img align='center' src="https://github.com/K-Giron/EDD_VJ1S2023_PY_202010844/assets/68490914/92ea67b6-9a12-40bd-9bc3-0daf237f0ce3" width="400">
 <br>
