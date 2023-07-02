@@ -7,7 +7,7 @@ La aplicación tiene como objetivo realizar un sistema que registre los empleado
 ### Estructuras de datos para cada objeto
 Se utilizan diferentes estructuras de datos para guardar cada tipo de dato.
 <br>
-<img align='center' src="https://github.com/K-Giron/EDD_VJ1S2023_PY_202010844/assets/68490914/19474e62-30f8-443c-a8fb-21d70f92c98a" width="600">
+<img align='center' src="https://github.com/K-Giron/EDD_VJ1S2023_PY_202010844/assets/68490914/da85cae1-6a4c-469d-975e-b7846d258582">
 <br>
 
 ### Carga de datos
